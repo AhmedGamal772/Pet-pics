@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Pet pics</title> 
+</head>
+<body>
+    <div class="wraper">
+        <div class="container">
+            <div class="box">
+                <h2>Select a pic to distinguish</h2>
+            </div>
+            <div class="box">
+                <form id="upload-form">
+                        <input type="file" name="file-input" id="file-input" accept="image/*" required>
+                        <label for="file-input" id="file-input-label">Choose a file</label>
+                        <button type="submit" class="classify-btn" for="file-input">Classify</button>
+                    </form>
+            </div>
+            <div class="box">
+                <div class="result " id="predictionResult">
+                    Result:
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
